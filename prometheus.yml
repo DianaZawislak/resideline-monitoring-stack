@@ -1,0 +1,185 @@
+global:
+  scrape_interval: 60s
+  evaluation_interval: 60s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: 'node-metrics-monitoring-server'
+    static_configs:
+      - targets: ['157.245.3.167:9100']
+
+  - job_name: 'node-router'
+    static_configs:
+      - targets: ['159.65.167.68:9100']
+
+  - job_name: 'mongodb-shard3-replica3'
+    static_configs:
+      - targets: ['167.71.247.191:9216']
+
+  - job_name: 'node-config-3'
+    static_configs:
+      - targets: ['142.93.73.204:9100']
+
+  - job_name: 'node-config-1'
+    static_configs:
+      - targets: ['164.90.133.210:9100']
+
+  - job_name: 'node-config-2'
+    static_configs:
+      - targets: ['164.90.133.34:9100']
+
+  - job_name: 'node-shard3-replica3'
+    static_configs:
+      - targets: ['167.71.247.191:9100']
+
+  - job_name: 'node-shard3-replica2'
+    static_configs:
+      - targets: ['167.71.247.107:9100']
+
+  - job_name: 'node-shard2-replica1'
+    static_configs:
+      - targets: ['157.245.3.246:9100']
+
+  - job_name: 'node-shard1-replica2'
+    static_configs:
+      - targets: ['157.245.3.156:9100']
+
+  - job_name: 'node-shard1-replica1'
+    static_configs:
+      - targets: ['157.245.3.65:9100']
+
+  - job_name: 'node-shard2-replica3'
+    static_configs:
+      - targets: ['167.71.247.183:9100']
+
+  - job_name: 'node-shard2-replica2'
+    static_configs:
+      - targets: ['157.245.3.203:9100']
+
+  - job_name: 'node-shard1-replica3'
+    static_configs:
+      - targets: ['157.245.3.192:9100']
+
+  - job_name: 'node-shard3-replica1'
+    static_configs:
+      - targets: ['167.71.251.192:9100']
+
+  - job_name: 'mongodb-shard3-replica2'
+    static_configs:
+      - targets: ['167.71.247.107:9216']
+
+  - job_name: 'mongodb-shard2-replica1'
+    static_configs:
+      - targets: ['157.245.3.246:9216']
+
+  - job_name: 'mongodb-shard1-replica2'
+    static_configs:
+      - targets: ['157.245.3.156:9216']
+
+  - job_name: 'mongodb-shard1-replica1'
+    static_configs:
+      - targets: ['157.245.3.65:9216']
+
+  - job_name: 'mongodb-shard2-replica3'
+    static_configs:
+      - targets: ['167.71.247.183:9216']
+
+  - job_name: 'mongodb-shard2-replica2'
+    static_configs:
+      - targets: ['157.245.3.203:9216']
+
+  - job_name: 'mongodb-shard1-replica3'
+    static_configs:
+      - targets: ['157.245.3.192:9216']
+
+  - job_name: 'mongodb-shard3-replica1'
+    static_configs:
+      - targets: ['167.71.251.192:9216']
+
+  - job_name: 'mongodb-router'
+    static_configs:
+      - targets: ['159.65.167.68:9216']
+
+  - job_name: 'mongodb-config1'
+    static_configs:
+      - targets: ['164.90.133.210:9216']
+
+  - job_name: 'mongodb-config2'
+    static_configs:
+      - targets: ['164.90.133.34:9216']
+
+  - job_name: 'mongodb-config3'
+    static_configs:
+      - targets: ['142.93.73.204:9216']
+
+  - job_name: 'cadvisor'
+    static_configs:
+      - targets: ['157.245.3.167:8080']
+
+  - job_name: 'docker_daemon'
+    static_configs:
+      - targets: ['157.245.3.167:9323']
+
+  - job_name: 'kube-state-metrics-node-1'
+    static_configs:
+      - targets: ['167.71.110.1:30080']
+
+  - job_name: 'kube-state-metrics-node-2'
+    static_configs:
+      - targets: ['138.197.79.217:30080']
+
+  - job_name: 'kube-state-metrics-node-3'
+    static_configs:
+      - targets: ['104.248.11.135:30080']
+
+  - job_name: 'kube-state-metrics-node-4'
+    static_configs:
+      - targets: ['165.227.222.51:30080']
+
+  - job_name: 'node-apis-production-b6sog'
+    static_configs:
+      - targets: ['167.71.110.1:30100']
+
+  - job_name: 'node-apis-production-blybc'
+    static_configs:
+      - targets: ['138.197.79.217:30100']
+
+  - job_name: 'node-front-end-production-rlg3q'
+    static_configs:
+      - targets: ['104.248.11.135:30100']
+
+  - job_name: 'node-production-worker-b7yan'
+    static_configs:
+      - targets: ['165.227.222.51:30100']
+
+  - job_name: 'kubelet-apis-production-b6sog'
+    scheme: https
+    tls_config:
+      insecure_skip_verify: true
+    static_configs:
+      - targets: ['167.71.110.1:10250']
+
+  - job_name: 'kubelet-apis-production-blybc'
+    scheme: https
+    tls_config:
+      insecure_skip_verify: true
+    static_configs:
+      - targets: ['138.197.79.217:10250']
+
+  - job_name: 'kubelet-front-end-production-rlg3q'
+    scheme: https
+    tls_config:
+      insecure_skip_verify: true
+    static_configs:
+      - targets: ['104.248.11.135:10250']
+
+  - job_name: 'kubelet-production-worker-b7yan'
+    scheme: https
+    tls_config:
+      insecure_skip_verify: true
+    static_configs:
+      - targets: ['165.227.222.51:10250']
+

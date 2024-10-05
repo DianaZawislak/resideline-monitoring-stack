@@ -1,0 +1,14 @@
+# Ignore Grafana data
+grafana-data/
+
+# Ignore any .env files that might contain sensitive information
+*.env
+
+# Ignore log files
+*.log
+
+# Ignore any backup files
+*backup*
+
+# Ignore any files with passwords or keys
+*kkey*
